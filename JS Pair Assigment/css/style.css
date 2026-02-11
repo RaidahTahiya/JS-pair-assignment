@@ -1,0 +1,31 @@
+/* 
+    Document   : catchTheRabbit
+    Created on : 22-May-2012, 5:00:01 PM
+    Author     : Sam Scott
+    Description:
+        Style sheet for Catch the Rabbit
+*/
+
+body {
+    text-align:center;
+    font-size:100%;
+    background-image: url("../images/pizza_table.png");
+    background-size: cover;
+
+}
+h1 {
+    font-size: 5em;
+    font-family: "Rubik Maps", system-ui;
+    padding-top: 30px;
+    color: rgb(255, 187, 0);
+}
+
+.rubik-maps-regular {
+  font-family: "Rubik Maps", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#slice {
+    size-adjust: inherit;
+}
