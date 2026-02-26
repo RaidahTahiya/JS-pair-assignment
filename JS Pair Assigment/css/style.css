@@ -1,115 +1,105 @@
 body {
-    font-size:10%;
+    font-family: "Rubik Maps", sans-serif;
+    font-size: 20px;
     background-image: url("../images/pizza_table.png");
     background-size: cover;
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
+header h1 {
+    margin-top: 20px;
+    font-size: 40px;
+    color: #fff;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;  /* horizontal centering */
+    align-items: center;      /* vertical centering */
+    gap: 50px;
+    margin-top: 40px;
+}
+
+#click-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pizza {
+    width: 500px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#pizza:active {
+    transform: scale(0.95);
+}
+
+#pizza-count {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.upgrades {
+    width: 300px;
+    padding: 20px;
+    background-color: rgb(255, 187, 0);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#coins {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: -10px;
 }
 
 .upgrades h1 {
     font-size: 20px;
-    background-color: transparent;
+    margin: 0;
 }
 
-.upgrades {
-    font-family: "Rubik Maps", system-ui;
-    padding: 20px;
-    padding-top: 0;
-    background-color: rgb(255, 187, 0);
-    width: 25%;
-    border-radius: 20px;
-    margin: auto;
-    margin-right: 110px;
+.updatebox {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.upgrade-item {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-
+    align-items: flex-start;
 }
 
-#coins {
-    background-color: transparent;
-    margin:0;
-    padding: 0;
-    margin-bottom: -20px;
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap:10px;
+.upgrade-item h3 {
+    margin: 0;
+    font-size: 17px;
 }
 
-.upgrades > div {
-    background-color: beige;
-    padding: 20px;
-    border-radius: 20px;
-    margin:0;
-
+.upgrade-item p {
+    margin: 0;
+    font-size: 12px;
 }
 
-.rubik-maps-regular {
-  font-family: "Rubik Maps", system-ui;
-  font-weight: 400;
-  font-style: normal;
+.count h2 {
+    margin: 0;
 }
 
 .upgrades input[type=button] {
     width: 80px;
     background-color: orange;
     border-radius: 10px;
-}
-
-input[type=button]:hover {
-    background-color: rgb(187, 127, 16);
     cursor: pointer;
 }
 
-.updatebox{
-  display:flex;
-  gap: 24px;
-  align-items:flex-start;
+.upgrades input[type=button]:hover {
+    background-color: rgb(187, 127, 16);
 }
-
-#buttons{
-  display:flex;
-  flex-direction:column;
-  gap: 48px;
-  align-items:flex-start;   
-}
-
-.upgrade-item h3 {
-    font-size: 17px;
-    margin: 0;
-}
-.upgrade-item p {
-    font-size: 11px;
-    margin: 0;
-}
-
-#purchase {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    
-}
-
-.updatebox {
-    display: flex;
-    align-items: flex-start;
-}
-
-.upgrade-item{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  text-align:left;
-}
-
-#coin {
-    display: block;
-}
-
-.count {
-    margin-left: auto;
-    margin-top: -30px;
-}
-
