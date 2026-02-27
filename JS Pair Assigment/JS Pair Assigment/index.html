@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--
+Turn this into a working arithmetic app.
+Sam Scott, McMaster, 2024
+-->
+<html>
+    <head>
+        <title>Pizza Clicker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel = "stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Maps&display=swap" rel="stylesheet">
+
+         <style type="text/css">
+            input[type=number], input[type=text], select {
+                width:50px;
+                font-family: sans-serif;
+                text-align:right;
+                font-size:20px;
+            }
+            input[type=button] {
+                font-size:20px;
+                width:170px;
+            }
+            form {
+                margin:auto;
+                width:380px;
+                background-color:rgb(226, 147, 83);
+                padding:30px 20px;
+                display:flex;
+                flex-direction:column;
+                gap: 40px;
+                margin-left: 40px;
+                margin-top:40px;
+                border-radius: 30px;
+            }
+
+
+            
+        </style>
+
+    </head>
+    <body>
+        <div id='wrapper'>
+            <header>
+                <h1>Pizza Clicker!</h1>
+            </header>
+
+            <div id="click-area">
+                <img id="pizza" src="images/pizza_slice.png" alt="Pizza slice">
+                <h2 id="pizza-count">0</h2>
+            </div>
+
+            <div class="upgrades">
+                
+                <div id="coins">
+                    <img src="images/coin.png" width = 60px>
+                    <h2>0.00</h2>
+                </div>
+                <div>
+                    <h1>UPGRADES</h1>
+                </div>
+
+                <div id="purchase">
+
+                    <div class = "updatebox">
+                        <input type="button" id="oven" value="BUY">
+                        <div class="upgrade-item">
+                            <h3>OVEN</h3>
+                            <p>Cost: 1000</p>
+                        </div>
+                        <div class="count">
+                            <h2>0</h2>
+                        </div>
+                    </div>
+
+                    <div class = "updatebox">
+                        <input type="button" id="chef" value="BUY">
+                        <div class="upgrade-item">
+                            <h3>CHEF</h3>
+                            <p>Cost: 1000</p>
+                        </div>
+                        <div class="count">
+                            <h2>0</h2>
+                        </div>
+                    </div>
+                    <div class = "updatebox">
+                        <input type="button" id="extracheese" value="BUY">
+                        <div class="upgrade-item">
+                            <h3>EXTRA CHEESE</h3>
+                            <p>Cost: 1000</p>
+                        </div>
+                         <div class="count">
+                            <h2>0</h2>
+                        </div>
+                    </div>
+
+                    <div class = "updatebox">
+                        <input type="button" id="specialsauce" value="BUY">
+                        <div class="upgrade-item">
+                            <h3>SPECIAL SAUCE</h3>
+                            <p>Cost: 1000</p>
+                        </div>
+                        <div class="count">
+                            <h2>0</h2>
+                        </div>
+                    </div>
+
+                    <div class = "updatebox">
+                        <input type="button" id="oven" value="BUY">
+                        <div class="upgrade-item">
+                            <h3>OVEN</h3>
+                            <p>Cost: 1000</p>
+                        </div>
+                         <div class="count">
+                            <h2>0</h2>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="rewards">
+
+                <div id=title>
+                    <h1>REWARDS</h1>
+                </div>
+                <div class="prizes">
+                    <div id="chefhat">
+                        <img id = "hat" src="images/chef.png" width="70px">
+                    </div>
+
+                    <div id="trophy">
+                        <img id = "trophy1" src="images/trophy.png" width="70px">
+                    </div>
+
+                    <div id="bronze">
+                        <img id = "trophy2" src="images/bronze.png" width="70px">
+                    </div>
+
+                    <div id="silver">
+                        <img id = "trophy3" src="images/silver.png" width="65px">
+                    </div>
+
+                    <div id="restaurant">
+                        <img id = "trophy4" src="images/restaurant.png" width="100px">
+                    </div>
+                    
+                </div>
+            </div> 
+                <canvas id="animationCanvas" width="800" height="600" style="position:fixed; top:0; left:0; pointer-events:none;"></canvas>
+        </div>
+
+        <div id="rewardmsg">
+            <h2>REWARD UNLOCKED!</h2>
+        </div>
+
+        <div class="scoreboard">
+            <div id=scoretitle>
+                <h1>SCOREBOARD</h1>
+            </div>
+            <div class="scores">
+                <div id="chefhat">
+                    <img id = "money" src="images/chef.png" width="50px">
+                </div>
+
+                <div id="clickvalue">
+                    <img id = "fing" src="images/finger.png" width="50px">
+                </div>
+
+                <div id="upgradesplay">
+                    <img id = "upg" src="images/upgrade.png" width="50px">
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    </body>
+</html>
