@@ -23,16 +23,16 @@ window.addEventListener("load", function () {
     let autoClickInterval = null;
 
     const pizzaImg = document.getElementById("pizza");
-    const pizzaCountEl = document.getElementById("pizza-count");
-    const coinsEl = document.querySelector("#coins h2");
-    const clickValueEl = document.getElementById("click-value");
-    const totalPizzaEl = document.getElementById("total-pizza");
-    const rewardMsgEl = document.getElementById("rewardmsg");
+    const pizzaCountEl = document.getElementById("pizza-count"); //text element for number of pizzas
+    const coinsEl = document.querySelector("#coins h2"); //text element for number of pizzas
+    const clickValueEl = document.getElementById("click-value"); //text element for number of pizzas per click
+    const totalPizzaEl = document.getElementById("total-pizza"); //text element for pizzas clicked in total
+    const rewardMsgEl = document.getElementById("rewardmsg"); // element for reward message
     const helpPanel = document.getElementById("help-panel");
     const helpBtn = document.getElementById("help-btn");
     const helpClose = document.getElementById("help-close");
 
-    pizzaImg.addEventListener("click", function () { //responsible for increasing the counts and calling updates and checks
+    pizzaImg.addEventListener("click", function () { //responsible for increasing the counts and calling updates and checks with pizza clicks
         pizzaCount += pizzaPerClick;
         coins += pizzaPerClick;
         totalPizzaEver += pizzaPerClick;
@@ -40,7 +40,7 @@ window.addEventListener("load", function () {
         checkRewards();
     });
 
-    /* Updates display by changing the counts accessing innerText
+    /* Updates all displayed game values including pizzas, coins, click value, and upgrade costs/counts
     */
     function updateDisplay() {
         pizzaCountEl.innerText = pizzaCount;
@@ -66,7 +66,7 @@ window.addEventListener("load", function () {
 
         button.addEventListener("click", function () {
 
-            const id = button.dataset.upgrade; //retriving specifc button from DOM
+            const id = button.dataset.upgrade; //gets which upgrade button was clicked using its data attribute
             const upgrade = upgrades[id];
 
             if (!upgrade) {
@@ -159,8 +159,8 @@ window.addEventListener("load", function () {
     /** 
     * Triggers interactive display and message after achieving a reward
     * 
-    * @param {imgId} string 
-    * @param {text} string
+    * @param {string} imgId - id of reward image
+    * @param {string} text - reward message to display
     */
     function unlockReward(imgId, text) {
         const img = document.getElementById(imgId);
