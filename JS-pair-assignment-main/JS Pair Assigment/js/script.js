@@ -136,7 +136,7 @@ window.addEventListener("load", function () {
     function checkRewards() {
         for (let key in rewards) {
             let reward_info = rewards[key]; //Retrieve information about that reward
-            if (!reward_info.done && r.threshold !== null && totalPizzaEver >= reward_info.threshold) { //not achieved, not the first reward, total pizzas meets requirements
+            if (!reward_info.done && reward_info.threshold !== null && totalPizzaEver >= reward_info.threshold) { //not achieved, not the first reward, total pizzas meets requirements
                 reward_info.done = true;    //reward acheived
                 unlockReward(reward_info.id, reward_info.msg);
             }
